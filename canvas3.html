@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Canvas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {
+            background-color: blanchedalmond;
+        }
+        input{
+            border:5px solid blue;
+            height:50px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body oncontextmenu="return false;">
+    <input type="text" id="txt">
+    <canvas id="mycan">
+        this is my canvas
+    </canvas>
+
+    <script>
+        let txt=document.querySelector("#txt");
+        let mycan = document.querySelector("#mycan");
+
+        let ctx = mycan.getContext("2d");
+        
+        mycan.width = window.innerWidth;
+        mycan.height = window.innerHeight;
+
+        txt.addEventListener('input', function (event) { 
+            ctx.clearRect(0, 0, mycan.width, mycan.height); 
+            ctx.font ="italic small-caps bold 30px arial";
+            ctx.fillText(txt.value, 200, 200);            
+            ctx.fillStyle="red";
+           
+
+        })      
+           
+          
+    </script>
+</body>
+
+</html>

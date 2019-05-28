@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Canvas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+
+<body oncontextmenu="return false;">
+    <canvas id="mycan">
+        this is my canvas
+    </canvas>
+    <script>
+        let mycan = document.querySelector("#mycan");
+        let ctx = mycan.getContext("2d");
+
+        mycan.width = window.innerWidth;
+        mycan.height = window.innerHeight;
+        mycan.addEventListener('mousedown', function (event) {
+
+            var buttonPressed = event.button;
+            //buttonPressed.Oncontextmenu= event.preventDefault();
+            if (buttonPressed == 0) {
+                mycan.addEventListener('mousemove', function (event) {
+                    ctx.beginPath();
+                    ctx.fillStyle = 'yellow';
+                    ctx.fill();
+                    ctx.fillRect(event.x, event.y, 40, 30);
+                    ctx.closePath();
+                })
+            }
+            else if (buttonPressed == 2) {
+                mycan.addEventListener('mousemove', function (event) {
+                    ctx.clearRect(event.x, event.y, 40, 30);
+                })
+
+            }
+        })
+    </script>
+</body>
+
+</html>
