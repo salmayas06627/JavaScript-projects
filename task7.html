@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="task7.css">
+    <title>currency converter</title>
+</head>
+
+<body class="container">
+
+    <h1>Currency converter</h1>
+    <table>
+        <tr>
+            <td>
+                <label>From</label>
+            </td>
+            <td>
+                <label>To</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="from">
+            </td>
+            <td>
+                <input type="text" id="to" disabled>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <select id="fromlist">
+                    <option>Dollar</option>
+                    <option>Euro</option>
+                    <option>EGP</option>
+                </select>
+            </td>
+            <td>
+                <select id="tolist">
+                    <option value="1">Dollar</option>
+                    <option value="0.83">Euro</option>
+                    <option value="17">EGP</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="convert" id="btn">
+            </td>
+        </tr>
+    </table>
+
+    <script src="task7.js"></script>
+</body>
+
+</html>
