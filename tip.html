@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Tip calculator</title>
+    <link rel="stylesheet" type="text/css" href="tip.css">
+</head>
+
+<body>
+    <h1>Tip calculator</h1>
+    <table>
+        <tr>
+            <td>
+                <input type="number"  id="txt1" placeholder="amount">
+                <label>$</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <select id="menu">
+                    <option value= "0.4">Excellent</option>
+                    <option value= "0.35">Good</option>
+                    <option value = "0.2">Bad </option>
+                    <option value= "0.1">Verybad</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text"  id="txt2" placeholder="Noofpeople">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="Calc" id="btn">
+        </tr>
+        <tr>
+            <td>
+                <label id="you"></label>
+                <input type="text" value="text" id="txt3" disabled>
+            </td>
+        </tr>
+    </table>
+
+    <script src="tip.js"></script>
+
+
+</body>
+
+</html>
