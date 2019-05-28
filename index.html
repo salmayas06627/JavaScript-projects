@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Html5css3</title>
+    <style>
+        @keyframes animate{
+            from{
+                background-color:rgb(139, 44, 0);
+            }
+            to{
+                background-color:rgb(137, 139, 0);
+            }
+        }
+        body {
+            background-image: url("back3.jpg");
+        }
+
+        div {
+            border: 5px solid lightslategray;
+            border-radius: 10px;
+            background-color: rgb(99, 111, 218);
+            width: 990px;
+            height: 200px;
+            margin: 150px;
+          
+        }
+
+        input {
+            margin: 5px auto;
+            border-radius: 5px;
+        }
+
+        #sec1 {
+            background-color:lightblue;
+            border-radius: 10px;
+            border: 5px solid lightslategray;
+            margin: 15px;
+            padding: 25px;
+            float: left;
+            animation:animate;
+            animation-duration:2s;
+        }
+
+        #sec2 {
+            border: 5px solid lightslategray;
+            border-radius: 10px;
+            background-color:lightblue;
+            margin: 15px;
+            padding: 25px;
+            float: right;
+            animation:animate;
+            animation-duration:2s;
+           
+        }
+
+        label {
+            font-size: 20px;
+            text-align: center;
+            margin: 5px;
+            padding: 5px;
+            display: block;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <section id="sec1">
+            <form oninput="out1.value=Number(num1.value)+Number(num2.value)">
+                <label>Addition</label>
+                <input type="number" name="num1"> +
+                <input type="number" name="num2"> =
+                <output name="out1"></output>
+            </form>
+        </section>
+
+        <section id="sec2">
+            <form oninput="out2.value=Number(num3.value)* Number(num4.value)">
+                <label>Multiplication</label>
+                <input type="number" name="num3"> *
+                <input type="number" name="num4"> =
+                <output name="out2"></output>
+            </form>
+        </section>
+    </div>
+    <script>
+
+    </script>
+</body>
+
+</html>

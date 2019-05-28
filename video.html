@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>video</title>
+    <style>
+        body {
+            background-image: url("image6.jpg");
+        }
+
+        div {
+            border: 5px solid rgba(14, 59, 33, 0.986);
+            border-radius: 10px;
+            background-color: rgb(122, 211, 49);
+            width: 990px;
+            height: 500px;
+            margin: 150px;
+            /*background-image: url("image1.jpg");*/
+        }
+
+        #sec1 {
+            background-color: rgb(13, 14, 15);
+            border-radius: 10px;
+            border: 5px solid rgba(14, 59, 33, 0.986);
+            margin: 15px;
+            padding: 25px;
+            width: 250px;
+            height: 400px;
+            float: left;
+        }
+
+        #sec2 {
+            border: 5px solid rgba(14, 59, 33, 0.986);
+            border-radius: 50%;
+            background-color: rgb(13, 14, 15);
+            margin: 15px;
+            padding: 25px;
+            width: 550px;
+            height: 400px;
+            float: right;
+        }
+
+        div section video {
+
+            width: 240px;
+            height: 90px;
+            display: block;
+            margin: 5px auto;
+            border-radius: 10px;
+
+        }
+
+        #player1.hover {
+            transform: rotate(360deg);
+        }
+
+        #player5 {
+            background-color: burlywood;
+            border-radius: 50%;
+            border: 5px solid rgba(14, 59, 33, 0.986);
+            width: 540px;
+            height: 380px;
+        }
+
+        input {
+            margin: 10px;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <section id="sec1">
+            <video id="player1" src="vedio1.mp4">
+            </video>
+            <video id="player2" src="video2 (1).mp4" type="video/mp4">
+            </video>
+            <video id="player3" src="video2 (2).mp4" type="video/mp4">
+            </video>
+            <video id="player4" src="video2 (3).mp4" type="video/mp4">
+            </video>
+        </section>
+        <section id="sec2">
+            <video id="player5" poster="image2.jpg" src="giphy.mp4">
+            </video>
+        </section>
+    </div>
+    <script>
+        const player1 = document.querySelector("#player1");
+        const player2 = document.querySelector("#player2");
+        const player3 = document.querySelector("#player3");
+        const player4 = document.querySelector("#player4");
+        const player5 = document.querySelector("#player5");
+        let i = 0;
+        player1.addEventListener("click", function (event) {
+            i++;
+            var vid = player1.src;
+            player5.src = vid;
+            if (i = 1) {
+                player5.play();
+            }
+            setTimeout(fun, 1000);
+            // delay(1000);
+            function fun() {
+                if (i = 2) {
+                    player5.webkitRequestFullscreen();
+                }
+                i == 0;
+            }
+            if (i = 2) {
+                player5.webkitRequestFullscreen();
+            }
+            i == 0;
+        });
+        player2.addEventListener("click", function (event) {
+            var vid2 = player2.src;
+            player5.src = vid2;
+            player5.play();
+        });
+        player3.addEventListener("click", function (event) {
+            var vid3 = player3.src;
+            player5.src = vid3;
+            player5.play();
+        });
+        player4.addEventListener("click", function (event) {
+            var vid4 = player4.src;
+            player5.src = vid4;
+            player5.play();
+        });
+        player5.addEventListener("click", function (event) {
+            player5.pause();
+        });
+
+
+    </script>
+</body>
+
+</html>
